@@ -10,6 +10,6 @@ data = {
 r = requests.post("https://calm-sands-19663.herokuapp.com/api/leadpred",json=data)
 
 if r.status_code == 200:
-    print(f"Success: {r.text}")
+    print(f"Prediction: {r.text}")
 else:
     print(f"Failure: {r.text}")

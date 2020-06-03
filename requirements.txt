@@ -4,6 +4,6 @@ gunicorn
 numpy
 pandas
 sklearn
-imblearn.over_sampling
+imblearn
 mlflow
 warnings

@@ -1,3 +1,9 @@
 flask
 pytest
 gunicorn
+numpy
+pandas
+sklearn
+imblearn.over_sampling
+mlflow
+warnings

@@ -1,7 +1,6 @@
 from basic_imports import *
 from flask import Flask, request, jsonify
 import numpy as np  
-from tensorflow.keras.models import load_model
 import joblib
 
 def return_prediction(model,en1,en2,sample_json):

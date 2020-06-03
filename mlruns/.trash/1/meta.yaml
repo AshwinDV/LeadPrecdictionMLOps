@@ -1,0 +1,4 @@
+artifact_location: file:///Users/asdv/Documents/Machine%20Learning/MLOps/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: LeadPred

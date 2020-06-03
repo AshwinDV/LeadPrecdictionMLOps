@@ -1,0 +1,15 @@
+artifact_uri: mlruns/0/2b5ffa69cb3a438d9060e986f13a5ae4/artifacts
+end_time: 1591174538634
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 2b5ffa69cb3a438d9060e986f13a5ae4
+run_uuid: 2b5ffa69cb3a438d9060e986f13a5ae4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1591174538587
+status: 3
+tags: []
+user_id: asdv

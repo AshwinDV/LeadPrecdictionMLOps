@@ -39,7 +39,7 @@ encoder_origin = mlflow.sklearn.load_model('mlruns/0/4991cca94fbc4a3fb2ead6fac8a
 model = model = mlflow.sklearn.load_model('mlruns/0/dbade588f1f44c5db2427ae03ad95ad5/artifacts/RandonForest')
 
 @app.route('/api/leadpred', methods=['POST'])
-def predict_flower():
+def predict():
 
     content = request.json
     results = return_prediction(model=model, en1=encoder_landing_page_id, en2=encoder_origin, sample_json=content)

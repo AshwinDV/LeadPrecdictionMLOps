@@ -6,7 +6,7 @@ y_train = pd.read_csv('y_train.csv')
 
 #Handle class imbalance 
 sm = SMOTE(random_state = 2) 
-X_train_res, y_train_res = sm.fit_sample(X_train, y_train)
+X_train_res, y_train_res = sm.fit_sample(X_train, y_train.values.ravel())
 
 # Create the parameter grid based on the results of random search 
 param_grid = {

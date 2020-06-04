@@ -8,7 +8,7 @@ y_test = pd.read_csv('y_test.csv')
 
 #Handle class imbalance
 sm = SMOTE(random_state = 2) 
-X_train_res, y_train_res = sm.fit_sample(X_train, y_train)
+X_train_res, y_train_res = sm.fit_sample(X_train, y_train.values.ravel())
 
 #Initialise with best possible parameters
 rfc = RandomForestClassifier(min_samples_split=2, n_estimators=50, random_state=42)

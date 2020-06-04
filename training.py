@@ -6,7 +6,7 @@ y = pd.read_csv('y.csv')
 
 #Handle class imbalance
 sm = SMOTE(random_state = 2) 
-X_res, y_res = sm.fit_sample(X, y)
+X_res, y_res = sm.fit_sample(X, y.values.ravel())
 
 #Initialise with chosen parameters 
 rfc = RandomForestClassifier(min_samples_split=2, n_estimators=50, random_state=42)

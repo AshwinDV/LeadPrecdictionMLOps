@@ -6,4 +6,3 @@ pandas
 sklearn
 imblearn
 mlflow
-email

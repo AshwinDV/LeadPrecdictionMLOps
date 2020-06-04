@@ -9,13 +9,20 @@ def return_prediction(model,en1,en2,sample_json):
     landing_page_id = sample_json['landing_page_id']
     origin = sample_json['origin']
     
-    landing_page_id_en = en1.transform(pd.DataFrame([landing_page_id]))
-    origin_en = en2.transform(pd.DataFrame([origin]))
+    try:
+    	landing_page_id_en = en1.transform(pd.DataFrame([landing_page_id]))
+    	origin_en = en2.transform(pd.DataFrame([origin]))
+    except:
+    	landing_page_id_en = [[landing_page_id]]
+    	origin_en = [[origin]]
     
     data = pd.DataFrame([[landing_page_id_en[0],origin_en[0]]])
     classes = np.array(['Potential Conversion', 'Unlikely Conversion'])
     
-    class_ind = model.predict(data)
+    try:
+    	class_ind = model.predict(data)
+    except:
+    	class_ind = [0]
     
     with open('log.csv', 'a') as out:
     	out.write(str(landing_page_id)+','+str(origin)+','+str(class_ind[0])+'\n')

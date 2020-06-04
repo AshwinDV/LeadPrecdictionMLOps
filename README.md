@@ -63,6 +63,23 @@ In layman's terms ML Ops can be defined as automating the ML project workflow an
         1. Detect if any new landing id is received during serving and alert via email
         2. Detect if any new origin is received during serving and alert via email
         
+ 12. Unit testing
+    1. basic unit tests were perfored using pytest 
+    
+ 13. Source code version control was done using git
+ 
+ 14. Model and metrics was version controlled using MLflow 
+ 
+ 15. Continuous Integration
+    1. CI was done using Github actions
+    2. As part of CI a ubuntu image was buit with required installs and unit & flake8 tests were condcuted on each push
+    
+ 16. Continuous Deployment
+    1. CD was done using Github actions
+    2. On push and successful pass of tests as part of CI process web app will be deployed in Heroku 
+    
+    
+        
   
     
 

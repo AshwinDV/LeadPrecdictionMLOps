@@ -6,5 +6,4 @@ pandas
 sklearn
 imblearn
 mlflow
-smtplib
 email

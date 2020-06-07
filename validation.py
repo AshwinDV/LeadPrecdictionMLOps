@@ -1,6 +1,6 @@
 from basic_imports import *
 
-def validation_test()
+def validation_test():
 	#Load data
 	X_train = pd.read_csv('X_train.csv')
 	y_train = pd.read_csv('y_train.csv')
@@ -21,11 +21,13 @@ def validation_test()
 
 	#Log values
 	with mlflow.start_run():
-    	mlflow.set_tag('Stage', 'Validation') 
-    	mlflow.log_param("min_samples_split", 2)
-    	mlflow.log_param("n_estimators", 50)
-    	mlflow.sklearn.log_model(rfc, "RandonForest")
-    	mlflow.log_metric("recall", classification_report(y_test,predictions,output_dict=True)['1']['recall'])
-    	mlflow.log_metric("precision", classification_report(y_test,predictions,output_dict=True)['1']['precision'])
+		mlflow.set_tag('Stage', 'Validation') 
+		mlflow.log_param("min_samples_split", 2)
+		mlflow.log_param("n_estimators", 50)
+		mlflow.sklearn.log_model(rfc, "RandonForest")
+		mlflow.log_metric("recall", classification_report(y_test,predictions,output_dict=True)['1']['recall'])
+		mlflow.log_metric("precision", classification_report(y_test,predictions,output_dict=True)['1']['precision'])
     	
-    return classification_report(y_test,predictions,output_dict=True)['1']['recall']
+	return classification_report(y_test,predictions,output_dict=True)['1']['recall']
+	
+validation_test()
